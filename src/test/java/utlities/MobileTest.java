@@ -104,5 +104,9 @@ public class MobileTest {
         System.out.println("Current Activity "+driver.currentActivity());
         System.out.println("Current Package"+driver.getCurrentPackage());
     }
+    @After
+    public void cleanUp(){
+        driver.pressKey(new KeyEvent(AndroidKey.HOME));
+    }
 
 }
